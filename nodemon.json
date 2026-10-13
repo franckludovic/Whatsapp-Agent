@@ -1,0 +1,6 @@
+{
+  "watch": ["index.js", ".env"],
+  "ext": "js,json,env",
+  "ignore": ["auth_info/**", "data/**", "node_modules/**", "knowledge_base.txt"],
+  "delay": 500
+}

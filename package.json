@@ -1,0 +1,29 @@
+{
+  "name": "whatsapp-kb-bot",
+  "version": "4.0.0",
+  "description": "WhatsApp bot that answers customers from an uploaded knowledge base using Google Gemini",
+  "type": "module",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.24",
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "mammoth": "^1.13.0",
+    "multer": "^2.4.0",
+    "pdf-parse": "^1.1.4",
+    "pino": "^10.4.0",
+    "qrcode-terminal": "^0.12.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

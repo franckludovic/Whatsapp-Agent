@@ -1,0 +1,19 @@
+# Render Blueprint, FREE plan. No persistent disk on the free plan:
+# the WhatsApp login and knowledge base are lost on restart or redeploy.
+services:
+  - type: web
+    name: whatsapp-kb-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: GOOGLE_API_KEY_AGENT
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: ADMIN_USER
+        value: admin
+      - key: ADMIN_PASSWORD
+        sync: false

@@ -1,0 +1,18 @@
+# systemd unit for a VPS: starts the bot at boot and restarts it if it crashes.
+[Unit]
+Description=WhatsApp knowledge base bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=botuser
+WorkingDirectory=/opt/whatsapp-bot
+EnvironmentFile=/opt/whatsapp-bot/.env
+Environment=DATA_DIR=/opt/whatsapp-bot/data
+ExecStart=/usr/bin/node index.js
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

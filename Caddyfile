@@ -1,0 +1,4 @@
+# VPS only: Caddy gives free HTTPS. Replace the domain with yours.
+bot.example.com {
+    reverse_proxy localhost:3000
+}
